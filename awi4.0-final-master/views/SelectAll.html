@@ -1,0 +1,39 @@
+$def with(result)
+<div class="container">
+    <h4 class="text-center my-2">Lista de todos los usuarios registrados</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <a href="/Insertar" class="btn btn-block btn-primary mx-auto d-block">Insertar</a>
+            </div>
+        </div>
+    </div>
+    <table class="table mt-5">
+        <thead class="thead-primary">
+            <th scope="col">Matricula</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Primer Apellido</th>
+            <th scope="col">Segundo Apellido</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Actualizar</th>
+            <th scope="col">Eliminar</th>
+        </thead>
+        <tbody>
+            $for row in result:
+            <tr>
+                <td>$row['MATRICULA']</td>
+                <td><a href="/Vista/$row['ID_PERSONA']" class="text-dark">$row['NOMBRE']</a></td>
+                <td>$row['PRIMER_APELLIDO']</td>
+                <td>$row['SEGUNDO_APELLIDO']</td>
+                <td>$row['EDAD']</td>
+                <td>$row['SEXO']</td>
+                <td>$row['ESTADO']</td>
+                <td><a href="/Actualizar/$row['ID_PERSONA']" class="text-dark">Actualizar</a></td>
+                <td><a href="/Borrar/$row['ID_PERSONA']" class="text-dark">Eliminar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

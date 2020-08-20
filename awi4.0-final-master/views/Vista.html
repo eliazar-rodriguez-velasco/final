@@ -1,0 +1,48 @@
+$def with (result)
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Nombre:</label>
+                    <input type="text" readonly value="$result['NOMBRE']" class="form-control text-center mx-auto d-block"  >
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Matricula:</label>
+                    <input type="text" readonly value="$result['MATRICULA']" class="form-control text-center mx-auto d-block"  >
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Primer apellido:</label>
+                    <input type="text" readonly value="$result['PRIMER_APELLIDO']" class="form-control text-center mx-auto d-block"  >
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Edad:</label>
+                    <input type="text" readonly value="$result['EDAD']" class="form-control text-center mx-auto d-block"  >
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Estado:</label>
+                    <input type="text" readonly value="$result['ESTADO']" class="form-control text-center mx-auto d-block"  >
+                </div>
+
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Segundo apellido:</label>
+                    <input type="text" readonly value="$result['SEGUNDO_APELLIDO']" class="form-control text-center mx-auto d-block"  >
+                </div>
+                <div class="form-group text-center font-weight-bold">
+                    <label class="text-center">Sexo:</label>
+                    <input type="text" readonly value="$result['SEXO']" class="form-control text-center mx-auto d-block"  >
+                </div>
+                <div class="form-fruop">
+                    <a href="/SelectAll" class="text-white btn btn-block btn-primary mt-1">Regresar</a>
+                </div>
+                <div class="form-group">
+                    <a href="/Actualizar/$result['ID_PERSONA']" class="btn btn-block btn-primary mt-3">Actualizar</a>
+                </div>
+                <div class="form-group">
+                    <a href="/Borrar/$result['ID_PERSONA']" class="btn btn-block btn-danger mt-1">Eliminar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
